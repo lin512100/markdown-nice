@@ -3,6 +3,7 @@ WORKDIR /app
 
 # install and cache app dependencies
 COPY package.json .
+RUN yarn config set registry https://registry.npm.taobao.org
 RUN yarn
 
 COPY . .
